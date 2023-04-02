@@ -24,7 +24,7 @@ resource "google_compute_instance" "dev-env" {
     Stage = "prod"
   }
 
-  metadata_startup_script = "apt update  apt -y install ansible git clone https://github.com/DouglasNatan/dev-env.git cd dev-env ansible-playbook playbook.yml -i inventory"
+  metadata_startup_script = "sudo apt update ;sudo apt -y install ansible ;git clone https://github.com/DouglasNatan/dev-env.git ;cd dev-env ;ansible-playbook playbook.yml -i inventory ;"
 
 
   service_account {
