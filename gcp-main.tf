@@ -2,7 +2,7 @@ resource "google_compute_instance" "dev-env" {
   name         = var.vm_name
   machine_type = "n1-standard-1"
   zone         = var.zone
-
+  
   tags = ["testeVM", "firstV", "prod"]
 
   boot_disk {
