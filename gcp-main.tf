@@ -8,9 +8,6 @@ resource "google_compute_instance" "dev-env" {
   boot_disk {
     initialize_params {
       image = "ubuntu-2004-focal-v20230213"
-      labels = {
-        my_label = "myVM"
-      }
     }
   }
 
