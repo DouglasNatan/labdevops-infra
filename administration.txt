@@ -1,0 +1,6 @@
+# ! /bin/bash
+apt update
+apt -y install ansible
+git clone https://github.com/DouglasNatan/dev-env.git
+cd dev-env
+ansible-playbook playbook.yml -i inventory
