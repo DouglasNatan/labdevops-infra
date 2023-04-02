@@ -24,15 +24,8 @@ resource "google_compute_instance" "dev-env" {
     Stage = "prod"
   }
 
-  metadata_startup_script = '# ! /bin/bash  
-                              apt update
-                              apt -y install ansible
-                              git clone https://github.com/DouglasNatan/dev-env.git
-                              cd dev-env
-                              ansible-playbook playbook.yml -i inventory
-                              cat <<EOF > /var/www/html/index.html
-                              <html><body><p>Linux startup script added directly.</p></body></html>
-                              EOF'
+  metadata_startup_script = "apt update  apt -y install ansible git clone https://github.com/DouglasNatan/dev-env.git cd dev-env ansible-playbook playbook.yml -i inventory"
+
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
