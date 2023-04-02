@@ -1,5 +1,5 @@
 resource "google_service_account" "default" {
-  account_id   = "113370964294922053823"
+  account_id   = 103990015584130077525
   display_name = "Service Account"
 }
 
@@ -36,7 +36,7 @@ resource "google_compute_instance" "myVM" {
 
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
-    email  = "839204131948-compute@developer.gserviceaccount.com"
+    email  = "terraform-new@douglasnatan-labdevops.iam.gserviceaccount.com"
     scopes = ["cloud-platform"]
   }
 }
