@@ -1,13 +1,8 @@
-resource "google_service_account" "sa-dnsg2006" {
-  account_id   = "sa-dnsg2006"
-  display_name = "Service Account User"
-}
-
-resource "google_compute_instance" "myVM" {
+resource "google_compute_instance" "dev-env" {
   name         = var.vm_name
   machine_type = "n1-standard-1"
   zone         = var.zone
-
+  
   tags = ["testeVM", "firstV", "prod"]
 
   boot_disk {
