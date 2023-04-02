@@ -14,3 +14,9 @@ variable "zone" {
   type        = string
   default     = "us-west1-b"
 }
+
+variable "vm_name" {
+  description = "VM Name"
+  type        = string
+  default     = "dev-env"
+}
