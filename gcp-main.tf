@@ -1,4 +1,4 @@
-resource "google_service_account" "default" {
+resource "google_service_account" "SA" {
   account_id   = "SA"
   display_name = "Service Account User"
 }
