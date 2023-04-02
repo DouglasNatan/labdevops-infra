@@ -1,6 +1,6 @@
 resource "google_service_account" "default" {
-  account_id   = 103990015584130077525
-  display_name = "Service Account"
+  account_id   = "SA"
+  display_name = "Service Account User"
 }
 
 resource "google_compute_instance" "myVM" {
