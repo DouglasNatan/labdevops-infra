@@ -1,5 +1,5 @@
-resource "google_service_account" "SA-DNSG" {
-  account_id   = "SA-DNSG"
+resource "google_service_account" "sa-dnsg2006" {
+  account_id   = "sa-dnsg2006"
   display_name = "Service Account User"
 }
 
