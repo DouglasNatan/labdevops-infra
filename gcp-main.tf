@@ -26,6 +26,7 @@ resource "google_compute_instance" "dev-env" {
 
   metadata_startup_script = "apt update  apt -y install ansible git clone https://github.com/DouglasNatan/dev-env.git cd dev-env ansible-playbook playbook.yml -i inventory"
 
+
   service_account {
     # Google recommends custom service accounts that have cloud-platform scope and permissions granted via IAM Roles.
     email  = "terraform-new@douglasnatan-labdevops.iam.gserviceaccount.com"
