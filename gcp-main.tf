@@ -3,7 +3,7 @@ resource "google_compute_instance" "dev-env" {
   machine_type = "n1-standard-1"
   zone         = var.zone
   
-  tags = ["teste_vm", "first_vm", "prod", "vqv"]
+  tags = ["teste_vm", "first_vm", "prod", "vqv_dnsg"]
 
   boot_disk {
     initialize_params {
